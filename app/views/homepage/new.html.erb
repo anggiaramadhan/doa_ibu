@@ -1,0 +1,15 @@
+<header class="flex flex-col items-center">
+  <h1 class="text-4xl leading-relaxed">Doa Ibu</h1>
+  <quote class="max-w-md">
+    "Doa Ibu adalah kumpulan kalimat yang sederhana. Tetapi mengandung banyak harapan yang tidak mudah dilakukan"
+  </quote>
+</header>
+<div class="flex justify-center pt-16">
+  <%= form_with scope: :user, url: sessions_path, html: { class: 'flex flex-col gap-2 w-3/12' } do |form| %>
+    <%= form.label :email %>
+    <%= form.email_field :email %>
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+    <%= form.submit "Login" %>
+  <% end %>
+</div>
